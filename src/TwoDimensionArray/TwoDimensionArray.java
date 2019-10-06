@@ -44,4 +44,34 @@ public class TwoDimensionArray {
             System.out.println("Position is Invalid");
         }
     }
+
+    //print at specific position
+    public void printValueAt(int row, int column) {
+        try {
+            System.out.println("value = " + arr[row - 1][column - 1] + " at " + "row = " + row + " column = " + column);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Invalid Position");
+        }
+    }
+
+    //print position of a value
+    public void printPositionOF(int value) {
+        try {
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = 0; j < arr[0].length; j++) {
+                    if (arr[i][j] == value) {
+                        System.out.print("row = ");
+                        System.out.print(i + 1);
+                        System.out.print(" column = ");
+                        System.out.print(j + 1);
+                        return;
+                    }
+                }
+            }
+            System.out.println("Value Not Found in the Array!");
+
+        } catch (Exception e) {
+            System.out.println("Error at printPositionOF function");
+        }
+    }
 }
