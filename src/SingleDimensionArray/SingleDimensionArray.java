@@ -5,7 +5,7 @@ public class SingleDimensionArray {
 
     //constructor
     public SingleDimensionArray(int sizeOffArray) {
-        arr = new int[sizeOffArray];
+        this.arr = new int[sizeOffArray];
         for (int i = 0; i < sizeOffArray; i++) {
             arr[i] = Integer.MIN_VALUE;
         }
