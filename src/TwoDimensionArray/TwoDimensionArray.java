@@ -26,8 +26,22 @@ public class TwoDimensionArray {
                 }
                 System.out.println();
             }
+            System.out.println();
         } catch (Exception e) {
             System.out.println("Error");
+        }
+    }
+
+    //insertion
+    public void insertValue(int value, int row, int column) {
+        try {
+            if (arr[row - 1][column - 1] == Integer.MIN_VALUE) {
+                arr[row - 1][column - 1] = value;
+            } else {
+                System.out.println("Position Already filled!");
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Position is Invalid");
         }
     }
 }
