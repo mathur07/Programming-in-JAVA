@@ -3,6 +3,7 @@ package LinkedList;
 public class LinkedListImplementation {
     Node head;
     Node tail;
+    int list_size = 0;
 
     public Node create_node(int data) {
         Node node = new Node();
@@ -22,6 +23,7 @@ public class LinkedListImplementation {
             }
             tempNode.next = newNode;
         }
+        list_size++;
         print_list();
     }
 
@@ -32,19 +34,38 @@ public class LinkedListImplementation {
             head = newNode;
             tail = newNode;
         } else {
-            tail.next=newNode;
+            tail.next = newNode;
             tail = newNode;
         }
+        list_size++;
         print_list();
     }
 
     public void insert_node_at_the_start(int data) {
         Node newNode = create_node(data);
-        Node tempNode = head;
         newNode.next = head;
         head = newNode;
+        list_size++;
         print_list();
+    }
 
+    // insert node at nth position
+    public void insert_node_at_nth_position(int data, int position) {
+        if (position > list_size && position < 1) {
+            System.out.println("Position = " + position + "is an invalid position!");
+        } else if (position == 1) {
+            insert_node_at_the_start(data);
+        } else {
+            Node newNode;
+            Node tempNode = head;
+            while (position-2 != 0){
+                position--;
+                tempNode = tempNode.next;
+            }
+            newNode = tempNode.next;
+            tempNode.next = newNode;
+            print_list();
+        }
     }
 
     public void print_list() {
