@@ -1,4 +1,4 @@
-package LinkedList;
+package SingleCircularLinkedList;
 
 import java.util.Scanner;
 
@@ -18,6 +18,9 @@ public class LinkedListMain {
         ll.insert_node_at_the_end_using_tail(4);
         ll.insert_node_at_the_end_using_tail(5);
         ll.insert_node_at_the_end_using_tail(6);
-        ll.insert_node_at_nth_position(10001,-1);
+        ll.insert_node_at_nth_position(10001,1);
+
+        ll.print_list();
+
     }
 }

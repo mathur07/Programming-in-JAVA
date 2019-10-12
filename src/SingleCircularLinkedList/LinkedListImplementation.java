@@ -1,4 +1,4 @@
-package LinkedList;
+package SingleCircularLinkedList;
 
 public class LinkedListImplementation {
     Node head;
@@ -24,7 +24,6 @@ public class LinkedListImplementation {
             tempNode.next = newNode;
         }
         list_size++;
-        print_list();
     }
 
     // uses O(1) Time Complexity in adding element at End.
@@ -33,39 +32,48 @@ public class LinkedListImplementation {
         if (head == null && tail == null) {
             head = newNode;
             tail = newNode;
+            newNode.next = head;
         } else {
             tail.next = newNode;
             tail = newNode;
+            newNode.next = head;
         }
         list_size++;
-        print_list();
     }
 
     public void insert_node_at_the_start(int data) {
         Node newNode = create_node(data);
-        newNode.next = head;
-        head = newNode;
-        list_size++;
-        print_list();
+        if (head == null && tail == null) {
+            head = newNode;
+            tail = newNode;
+            newNode.next = head;
+
+        } else {
+            newNode.next = head;
+            head = newNode;
+            tail.next = head;
+            list_size++;
+        }
     }
 
     // insert node at nth position
     public void insert_node_at_nth_position(int data, int position) {
-        if (position > list_size || position < 1) {
+        if (position > list_size + 1 || position < 1) {
             System.out.println("Position = " + position + " is an Invalid Position!");
         } else if (position == 1) {
             insert_node_at_the_start(data);
+        } else if (position == list_size) {
+            insert_node_at_the_end_using_tail(data);
         } else {
             Node newNode = create_node(data);
             Node tempNode = head;
-            while (position-2 != 0){
+            while (position - 2 != 0) {
                 position--;
                 tempNode = tempNode.next;
             }
             newNode.next = tempNode.next;
             tempNode.next = newNode;
             list_size++;
-            print_list();
         }
     }
 
@@ -79,3 +87,4 @@ public class LinkedListImplementation {
         System.out.println("list_size = " + list_size);
     }
 }
+
