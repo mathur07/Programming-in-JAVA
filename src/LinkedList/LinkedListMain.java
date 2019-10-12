@@ -18,6 +18,6 @@ public class LinkedListMain {
         ll.insert_node_at_the_end_using_tail(4);
         ll.insert_node_at_the_end_using_tail(5);
         ll.insert_node_at_the_end_using_tail(6);
-        ll.insert_node_at_nth_position(10001,3);
+        ll.insert_node_at_nth_position(10001,-1);
     }
 }
