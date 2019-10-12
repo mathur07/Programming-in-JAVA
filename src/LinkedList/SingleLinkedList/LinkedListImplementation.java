@@ -1,4 +1,4 @@
-package SingleLinkedList;
+package LinkedList.SingleLinkedList;
 
 public class LinkedListImplementation {
     Node head;

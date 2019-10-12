@@ -1,4 +1,4 @@
-package TwoDimensionArray;
+package Array.TwoDimensionArray;
 
 public class TwoDimensionArray {
     int[][] arr = null;

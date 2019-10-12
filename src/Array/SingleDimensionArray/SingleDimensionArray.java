@@ -1,4 +1,4 @@
-package SingleDimensionArray;
+package Array.SingleDimensionArray;
 
 public class SingleDimensionArray {
     int[] arr = null;

@@ -1,4 +1,4 @@
-package SingleCircularLinkedList;
+package LinkedList.SingleCircularLinkedList;
 
 import java.util.Scanner;
 

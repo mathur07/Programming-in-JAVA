@@ -1,4 +1,4 @@
-package SingleDimensionArray;
+package Array.SingleDimensionArray;
 public class SingleDimensionArrayMain {
     public static void main(String[] args) {
         SingleDimensionArray sda = new SingleDimensionArray(10);

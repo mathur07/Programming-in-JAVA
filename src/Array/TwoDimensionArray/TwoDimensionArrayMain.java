@@ -1,4 +1,4 @@
-package TwoDimensionArray;
+package Array.TwoDimensionArray;
 
 public class TwoDimensionArrayMain {
     public static void main(String[] args) {

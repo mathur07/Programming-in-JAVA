@@ -1,4 +1,4 @@
-package SingleCircularLinkedList;
+package LinkedList.SingleLinkedList;
 
 public class Node {
     int data;

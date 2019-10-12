@@ -1,4 +1,4 @@
-package SingleCircularLinkedList;
+package LinkedList.SingleCircularLinkedList;
 
 public class LinkedListImplementation {
     Node head;
