@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class StackImplementation {
 
     int[] stack;
-    int current_size = -1;
+    int top_of_stack = -1;
 
     public void create_stack(int size_of_stack) {
         stack = new int[size_of_stack];
@@ -16,8 +16,8 @@ public class StackImplementation {
         if (is_full()) {
             System.out.println("Stack is Full, cannot push! " + data);
         } else {
-            current_size++;
-            stack[current_size] = data;
+            top_of_stack++;
+            stack[top_of_stack] = data;
         }
     }
 
@@ -25,13 +25,13 @@ public class StackImplementation {
         if (is_empty()) {
             System.out.println("Stack is Empty, cannot pop!");
         } else {
-            stack[current_size] = Integer.MIN_VALUE;
-            current_size--;
+            stack[top_of_stack] = Integer.MIN_VALUE;
+            top_of_stack--;
         }
     }
 
     public boolean is_empty() {
-        if (current_size == -1) {
+        if (top_of_stack == -1) {
             return true;
         } else {
             return false;
@@ -39,7 +39,7 @@ public class StackImplementation {
     }
 
     public boolean is_full() {
-        if (current_size == stack.length - 1) {
+        if (top_of_stack == stack.length - 1) {
             return true;
         } else {
             return false;
@@ -47,7 +47,7 @@ public class StackImplementation {
     }
 
     public void peek() {
-        System.out.println("Stack Top Element is = " + stack[current_size]);
+        System.out.println("Stack Top Element is = " + stack[top_of_stack]);
     }
 
     public void print_stack() {
