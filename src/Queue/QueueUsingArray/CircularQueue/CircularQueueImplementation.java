@@ -30,7 +30,7 @@ public class CircularQueueImplementation {
     public void de_queue() {  //error
         if (is_empty()) {
             System.out.println("Queue is Empty!, Cannot DeQueue!");
-        } else if (queue_start == queue_end + 1) {
+        } else if (queue_start == queue_end) {
             queue[queue_start] = Integer.MIN_VALUE;
             queue_start = -1;
             queue_end = -1;
@@ -49,7 +49,7 @@ public class CircularQueueImplementation {
     }
 
     public boolean is_full() {
-        if (queue_start == 0 && (queue_end == queue.length - 1) || queue_end + 1 == queue_start) {
+        if (queue_start == 0 && (queue_end == queue.length - 1) || queue_start == queue_end + 1) {
             return true;
         } else {
             return false;

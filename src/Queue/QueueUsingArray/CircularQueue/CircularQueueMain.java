@@ -29,20 +29,19 @@ public class CircularQueueMain {
         q.de_queue();
         q.peek();
         q.print_queue();
-        System.out.println("=========================================");
         q.de_queue();
         q.print_queue();
         q.peek();
-        q.de_queue();//<================|
+        q.de_queue();
         q.print_queue();
         q.peek();
         q.de_queue();
         q.peek();
-        q.print_queue();
         q.en_queue(1);
         q.en_queue(2);
         q.en_queue(3);
         q.print_queue();
+        q.peek();
         q.de_queue();
         q.de_queue();
         q.peek();
