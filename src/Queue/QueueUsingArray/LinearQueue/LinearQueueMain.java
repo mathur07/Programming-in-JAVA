@@ -51,6 +51,7 @@ public class LinearQueueMain {
         q.en_queue(4);
         q.peek_start();
         q.peek_end();
+        System.out.println();
         q.print_queue();
         q.de_queue();
         q.peek_start();
