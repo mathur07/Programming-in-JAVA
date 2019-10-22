@@ -47,7 +47,7 @@ public class QueueMain {
         q.de_queue();
         q.de_queue();
         q.peek();
-
+        q.print_queue();
         q.en_queue(4);
         q.peek();
         q.print_queue();
@@ -59,6 +59,6 @@ public class QueueMain {
         q.de_queue();
         q.print_queue();
         q.peek();
-
+        
     }
 }
