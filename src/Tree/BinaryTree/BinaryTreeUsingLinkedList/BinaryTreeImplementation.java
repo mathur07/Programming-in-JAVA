@@ -40,12 +40,45 @@ public class BinaryTreeImplementation {
         }
     }
 
-    public void level_order_traversal() {
-        for (int i = 0; i <= lastUsedIndex; i++) {
-            System.out.printf(queue[i].data + " ");
+    public void pre_order_traversal(Node root) {
+        if (root == null) {
+            return;
+        } else {
+            System.out.printf(root.data + " ");
+            pre_order_traversal(root.leftSubTree);
+            pre_order_traversal(root.rightSubTree);
         }
-        System.out.println();
+    }
 
+    public void in_order_traversal(Node root) {
+        if (root == null) {
+            return;
+        } else {
+            in_order_traversal(root.leftSubTree);
+            System.out.printf(root.data + " ");
+            in_order_traversal(root.rightSubTree);
+        }
+    }
+
+    public void post_order_traversal(Node root) {
+        if (root == null) {
+            return;
+        } else {
+            post_order_traversal(root.leftSubTree);
+            post_order_traversal(root.rightSubTree);
+            System.out.printf(root.data + " ");
+        }
+    }
+
+    public void level_order_traversal() {
+        if (is_empty()) {
+            System.out.println("Tree Is Empty! Nothing to Traverse!");
+        } else {
+            for (int i = 0; i <= lastUsedIndex; i++) {
+                System.out.printf(queue[i].data + " ");
+            }
+            System.out.println();
+        }
 //        Stream.of(queue).forEach(x -> {
 //            System.out.printf(x.data + " ");
 //        });
