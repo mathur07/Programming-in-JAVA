@@ -35,16 +35,18 @@ public class BinarySearchTreeImplementation {
         int pointerIndex = 0, lastUsedIndex = 0;
         queue[pointerIndex] = root;
         while (pointerIndex <= lastUsedIndex) {
-            System.out.print(queue[pointerIndex].data + " ");
             if (queue[pointerIndex].leftSubTree != null) {
                 lastUsedIndex++;
                 queue[lastUsedIndex] = queue[pointerIndex].leftSubTree;
-            } else if (queue[pointerIndex].rightSubTree != null) {
+            }
+            if (queue[pointerIndex].rightSubTree != null) {
                 lastUsedIndex++;
                 queue[lastUsedIndex] = queue[pointerIndex].rightSubTree;
             }
+            System.out.print(queue[pointerIndex].data + " ");
             pointerIndex++;
         }
+
     }
 
     void in_order_traversal(Node root) {

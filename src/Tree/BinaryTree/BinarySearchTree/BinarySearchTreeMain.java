@@ -10,7 +10,10 @@ public class BinarySearchTreeMain {
         bst.insert_element(8);
         bst.insert_element(30);
         bst.insert_element(35);
-        bst.in_order_traversal(bst.root);
-
+        bst.insert_element(5);
+        bst.insert_element(25);
+        bst.insert_element(26);
+//        bst.in_order_traversal(bst.root);
+        bst.level_order_traversal();
     }
 }
