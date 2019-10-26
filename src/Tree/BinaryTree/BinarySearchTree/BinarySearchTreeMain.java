@@ -15,5 +15,8 @@ public class BinarySearchTreeMain {
         bst.insert_element(26);
 //        bst.in_order_traversal(bst.root);
         bst.level_order_traversal();
+
+        System.out.println();
+        bst.delete_element(5);
     }
 }

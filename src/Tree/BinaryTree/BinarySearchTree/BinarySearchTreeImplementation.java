@@ -30,6 +30,32 @@ public class BinarySearchTreeImplementation {
         return root;
     }
 
+
+//    case 1 : when element is root node and has 2 child node
+//    case 2 : when element is leaf
+//    case 3 : when element has one child
+
+    void delete_element(int data) {
+        Node tempRoot = root;
+        tempRoot = traverse_till_root_of_node_to_be_deleted(tempRoot, data);
+        if(tempRoot.leftSubTree.data == data){
+            if(tempRoot.leftSubTree.leftSubTree != null){
+                tempRoot.leftSubTree = tempRoot.leftSubTree.leftSubTree;
+            }else if(tempRoot.leftSubTree.rightSubTree!=null); //
+        }
+    }
+
+    private Node traverse_till_root_of_node_to_be_deleted(Node root, int data) {
+        if (root.leftSubTree.data == data || root.rightSubTree.data == data) {
+            return root;
+        } else if (data < root.data) {
+            root = traverse_till_root_of_node_to_be_deleted(root.leftSubTree, data);
+        } else if (data > root.data) {
+            root = traverse_till_root_of_node_to_be_deleted(root.rightSubTree, data);
+        }
+        return root;
+    }
+
     public void level_order_traversal() {
         Node[] queue = new Node[20];
         int pointerIndex = 0, lastUsedIndex = 0;
