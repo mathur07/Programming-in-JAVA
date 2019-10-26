@@ -1,6 +1,6 @@
 package Sorting.BubbleSort;
 
-import java.util.stream.Stream;
+import java.util.Arrays;
 
 public class BubbleSortMain {
 
@@ -10,10 +10,10 @@ public class BubbleSortMain {
         int[] array2 = {4, 8, 5, 1, 9, 6};
 
 
-        Stream.of(array).forEach(i -> {
+        Arrays.stream(array).forEach(i -> {
             System.out.println("array = " + i);
         });
-        Stream.of(array2).forEach(i -> {
+        Arrays.stream(array2).forEach(i -> {
             System.out.println("array2 = " + i);
         });
 
