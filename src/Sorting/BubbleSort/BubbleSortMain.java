@@ -9,7 +9,6 @@ public class BubbleSortMain {
         int[] array = new int[]{4, 8, 5, 1, 9, 6};
         int[] array2 = {4, 8, 5, 1, 9, 6};
 
-        System.out.println(array[0]);
 
         Stream.of(array).forEach(i -> {
             System.out.println("array = " + i);
