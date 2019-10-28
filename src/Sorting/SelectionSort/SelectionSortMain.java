@@ -14,6 +14,20 @@ public class SelectionSortMain {
 
         System.out.println();
 
+        for (int i = 0; i < array.length - 1; i++) {
+            int temp = Integer.MAX_VALUE;
+            int minIndex = Integer.MAX_VALUE;
+            for (int j = i; j < array.length; j++) {
+                if (array[j] < temp) {
+                    minIndex = j;
+                    temp = array[j];
+                }
+            }
+            temp = array[i];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
+        }
+
         System.out.println("Array Before Sorting!");
         Arrays.stream(array).forEach(i -> {
             System.out.print(i + " ");
