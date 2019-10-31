@@ -12,6 +12,8 @@ public class BucketSortMain {
         Arrays.stream(array).forEach(i -> {
             System.out.print(i + " ");
         });
+        
+        System.out.println();
 
         System.out.println("Array Before Sorting!");
         Arrays.stream(array).forEach(i -> {
