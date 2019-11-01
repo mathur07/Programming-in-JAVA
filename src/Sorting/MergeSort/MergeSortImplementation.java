@@ -13,7 +13,7 @@ public class MergeSortImplementation {
 
         System.out.println();
 
-        split(array);
+        merge_sort(array);
 
         System.out.println("Array after Sorting! :");
         for (int value : array) {
@@ -22,7 +22,7 @@ public class MergeSortImplementation {
     }
 
     // Merge Sort Logic
-    private static void split(int[] array) {
+    private static void merge_sort(int[] array) {
 
         int len = array.length;
         int mid = len / 2;
@@ -37,8 +37,8 @@ public class MergeSortImplementation {
 
         System.arraycopy(array, mid, right, 0, len - mid);
 
-        split(left);
-        split(right);
+        merge_sort(left);
+        merge_sort(right);
         merge(left, right, array);
 
     }
