@@ -4,22 +4,23 @@ import java.util.Arrays;
 
 public class MergeSortImplementation {
     public static void main(String[] args) {
-        int[] array = new int[]{};
+        int[] array = new int[]{4, 8, 5, 1, 9, 6};
 
         System.out.println("Array before Sorting! :");
-        Arrays.stream(array).forEach(i -> {
-            System.out.print(i + " ");
-        });
-
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+        split(array);
 
         System.out.println("Array after Sorting! :");
-        Arrays.stream(array).forEach(i -> {
-            System.out.print(i + " ");
-        });
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
     }
 
     // Merge Sort Logic
-    void split(int[] array) {
+    private static void split(int[] array) {
 
         int len = array.length;
         int mid = len / 2;
@@ -30,20 +31,45 @@ public class MergeSortImplementation {
             return;
         }
 
-        if (mid - 1 >= 0) {
-            System.arraycopy(array, 0, left, 0, mid - 1);
-        }
+        System.arraycopy(array, 0, left, 0, mid);
 
-        if (len - 1 - mid >= 0) {
-            System.arraycopy(array, mid, right, mid, len - 1 - mid);
-        }
+        System.arraycopy(array, mid, right, 0, len - mid);
 
         split(left);
         split(right);
+        merge(left, right, array);
 
     }
 
-    void merge(int[] left, int[] right,int[] Array){
+    private static void merge(int[] left, int[] right, int[] array) {
+
+        int l = 0;
+        int r = 0;
+        int k = 0;
+
+        while (l < left.length && r < right.length) {
+
+            if (left[l] <= right[r]) {
+                array[k] = left[l];
+                l++;
+            } else {
+                array[k] = right[r];
+                r++;
+            }
+            k++;
+        }
+
+        while (l < left.length) {
+            array[k] = left[l];
+            l++;
+            k++;
+        }
+
+        while (r < right.length) {
+            array[k] = right[r];
+            r++;
+            k++;
+        }
 
     }
 }
