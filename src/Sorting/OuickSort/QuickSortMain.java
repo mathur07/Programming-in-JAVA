@@ -11,19 +11,17 @@ public class QuickSortMain {
         }
         System.out.println();
 
-        quickSort(array);
+        quickSort(array, 0, array.length - 1);
 
         System.out.println("Array after Sorting : ");
         for (int value : array) {
-            System.out.printf(value + " ");
+            System.out.print(value + " ");
         }
 
     }
 
-    private static void quickSort(int[] array) {
-        int i = -1;
-        int j = 0;
-        int k = array.length - 1;
+    private static void quickSort(int[] array, int start, int end) {
+
 
     }
 }
