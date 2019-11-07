@@ -28,7 +28,7 @@ public class QFiveMain {
                 (digits[n - 2] == '2' && digits[n - 1] < '7'))
             count = countDecoding(digits, n - 2);
 
-        return count;
+        return count
     }
 
 
