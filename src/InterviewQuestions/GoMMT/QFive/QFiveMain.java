@@ -30,7 +30,7 @@ public class QFiveMain {
 
    count = countDecoding(digits, n - 2);
 
-        return count;
+       
     }
 
 
