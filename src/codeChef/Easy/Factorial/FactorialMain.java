@@ -20,7 +20,7 @@ public class FactorialMain {
                 System.out.println(count);
             }
         } catch (Exception e) {
-            return;
+            System.out.println("e = " + e);
         }
 
 
