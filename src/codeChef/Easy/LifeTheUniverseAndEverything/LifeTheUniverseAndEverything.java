@@ -16,7 +16,7 @@ public class LifeTheUniverseAndEverything {
                 }
             }
         } catch (Exception e) {
-            return;
+            System.out.println("e = " + e);
         }
     }
 }
