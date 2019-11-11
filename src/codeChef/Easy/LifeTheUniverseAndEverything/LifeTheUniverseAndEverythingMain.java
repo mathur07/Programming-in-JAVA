@@ -2,7 +2,7 @@ package codeChef.Easy.LifeTheUniverseAndEverything;
 
 import java.util.Scanner;
 
-public class LifeTheUniverseAndEverything {
+public class LifeTheUniverseAndEverythingMain {
     public static void main(String[] args) {
         try {
             Scanner scan = new Scanner(System.in);
