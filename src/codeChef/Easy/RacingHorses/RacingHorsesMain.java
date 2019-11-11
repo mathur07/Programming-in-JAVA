@@ -1,6 +1,5 @@
 package codeChef.Easy.RacingHorses;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -28,7 +27,7 @@ public class RacingHorsesMain {
             }
 
         } catch (Exception e) {
-            return;
+            System.out.println("e = " + e);
         }
     }
 }
