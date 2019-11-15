@@ -15,12 +15,18 @@ public class UncleJohnyMain {
                 array_size=scan.nextInt();
                 int[] array = new int[array_size];
                 for (int j = 0; j < array_size; j++) {
-                    array[i]=scan.nextInt();
+                    array[j]=scan.nextInt();
                 }
                 k=scan.nextInt();
 
                 Arrays.sort(array);
+                System.out.println("k = " + k);
+
                 k=array[k];
+                System.out.println("k = " + k);
+                for (int x:array) {
+                    System.out.println("x = " + x);
+                }
                 result=Arrays.binarySearch(array,k);
                 System.out.println("result = " + result);
 
