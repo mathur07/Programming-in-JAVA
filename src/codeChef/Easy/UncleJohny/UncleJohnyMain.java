@@ -18,17 +18,11 @@ public class UncleJohnyMain {
                     array[j]=scan.nextInt();
                 }
                 k=scan.nextInt();
-
-                Arrays.sort(array);
-                System.out.println("k = " + k);
-
                 k=array[k];
-                System.out.println("k = " + k);
-                for (int x:array) {
-                    System.out.println("x = " + x);
-                }
+                Arrays.sort(array);
+
                 result=Arrays.binarySearch(array,k);
-                System.out.println("result = " + result);
+                System.out.println(result);
 
             }
 
