@@ -1,10 +1,13 @@
 package LeetCode.Easy.TwoSum;
 
-import java.util.Scanner;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+import static java.lang.StrictMath.abs;
 
 public class TwoSumMain {
     public static void main(String[] args) {
-        int[] array = new int[]{11, 7, 11, 2};
+        int[] array = new int[]{9, 7, 15, 2};
         int target = 9;
         int[] result = new int[2];
         result = twoSum(array, target);
@@ -15,13 +18,16 @@ public class TwoSumMain {
 
     private static int[] twoSum(int[] array, int target) {
         int[] result = new int[2];
-        outerLoop:
-        for (int i = 0; i < array.length; i++) {
-            for (int j = i; j < array.length; j++) {
-                if (array[i] + array[j] == target) {
-                    result[0] = i;
-                    result[1] = j;
-                    break outerLoop;
+        int[] map = new int[target+1];
+        Arrays.fill(map,Integer.MIN_VALUE);
+
+        for (int value : array) {
+            if (value <= target) {
+                map[value] = value;
+                if (map[value] + map[abs(value - target)] == target) {
+                    result[0] = value;
+                    result[1] = abs(value - target);
+                    break;
                 }
             }
         }
