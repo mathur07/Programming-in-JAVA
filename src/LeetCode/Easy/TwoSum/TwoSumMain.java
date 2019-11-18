@@ -26,7 +26,7 @@ public class TwoSumMain {
                 map[value] = value;
                 if (map[value] + map[abs(value - target)] == target) {
                     result[0] = value;
-                    result[1] = abs(value - target);
+                    result[1] = (value - target);
                     break;
                 }
             }
