@@ -24,7 +24,7 @@ public class TwoSumMain {
 
         for (int i = 0; i < array.length; i++) {
             if (map.get(target - array[i]) != null) {
-                return new int[]{i, map.get(target - array[i])};
+                return new int[]{map.get(target - array[i]), i};
             } else {
                 map.put(array[i], i);
             }
