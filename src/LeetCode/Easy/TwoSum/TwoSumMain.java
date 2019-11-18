@@ -1,11 +1,8 @@
 package LeetCode.Easy.TwoSum;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.lang.StrictMath.abs;
 
 public class TwoSumMain {
     public static void main(String[] args) {
