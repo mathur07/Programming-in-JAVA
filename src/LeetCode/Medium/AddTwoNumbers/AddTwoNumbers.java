@@ -19,13 +19,21 @@ public class AddTwoNumbers {
         ListNode head;
         ListNode tempNode = new ListNode();
         head = tempNode;
-        int val;
+        int val, remainder_val;
+        boolean flag = false;
         while (l1.next != null && l2.next != null) {
             val = l1.val + l2.val;
-            ListNode tempNode = new ListNode();
+            if (val > 9) {
+                remainder_val = val % 10;
+                val = val / 10;
+                flag = true;
+            }
+            if (flag){
+
+            }
         }
 
-        return new ListNode(2);
+        return head;
 
 
     }
