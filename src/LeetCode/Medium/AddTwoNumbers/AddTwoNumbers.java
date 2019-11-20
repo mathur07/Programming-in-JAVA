@@ -17,18 +17,18 @@ public class AddTwoNumbers {
     private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         ListNode head;
-        ListNode tempNode = new ListNode();
+        ListNode tempNode = new ListNode(0);
         head = tempNode;
-        int val, remainder_val;
+        int val, remainder_val = 0;
         boolean flag = false;
         while (l1.next != null && l2.next != null) {
-            val = l1.val + l2.val;
+            val = l1.val + l2.val + remainder_val;
             if (val > 9) {
                 remainder_val = val % 10;
                 val = val / 10;
                 flag = true;
             }
-            if (flag){
+            if (flag) {
 
             }
         }
