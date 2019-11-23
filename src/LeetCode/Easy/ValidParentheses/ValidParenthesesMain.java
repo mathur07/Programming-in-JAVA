@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ValidParenthesesMain {
     public static void main(String[] args) {
-        String input_string = "{()}";
+        String input_string = "{)}";
         boolean result = valid_parentheses(input_string);
         System.out.println("result = " + result);
     }
@@ -15,16 +15,24 @@ public class ValidParenthesesMain {
         for (int i = 0; i < input_string.length(); i++) {
             String[] target_array = input_string.split("");
             String target =target_array[i];
-            System.out.println("target = " + target);
             if (("(").equals(target) || ("{").equals(target) || ("[").equals(target)) {
                 stack.push(target);
-                System.out.println("stack push = " + stack.peek());
             }
             if ((")").equals(target) || ("}").equals(target) || ("]").equals(target)) {
-                stack.pop();
-                System.out.println("stack pop = " + stack.peek());
+                String temp = stack.pop();
+                if(target.equals(")") && !temp.equals("(")){
+                    return false;
+                }
+                if(target.equals("}") && !temp.equals("{")){
+                    return false;
+                }
+                if(target.equals("]") && !temp.equals("[")){
+                    return false;
+                }
+
             }
         }
+
         return stack.empty();
 
     }
