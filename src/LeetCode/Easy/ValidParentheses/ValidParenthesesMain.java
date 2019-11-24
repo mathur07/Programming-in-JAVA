@@ -10,25 +10,24 @@ public class ValidParenthesesMain {
     }
 
     private static boolean valid_parentheses(String input_string) {
-        Stack<String> stack = new Stack<>();
+        Stack<Character> stack = new Stack<Character>();
 
         for (int i = 0; i < input_string.length(); i++) {
-            String[] target_array = input_string.split("");
-            String target = target_array[i];
-            if (("(").equals(target) || ("{").equals(target) || ("[").equals(target)) {
+            char target = input_string.charAt(i);
+            if ('('==target || '{'==target || '['==target) {
                 stack.push(target);
             }
             if (!stack.empty()) {
-                if ((")").equals(target) || ("}").equals(target) || ("]").equals(target)) {
-                    String temp = stack.pop();
+                if (')'==target || '}'==target || ']'==target) {
+                    Character temp = stack.pop();
 
-                    if (target.equals(")") && !temp.equals("(")) {
+                    if (')'==target && !(temp == '(')) {
                         return false;
                     }
-                    if (target.equals("}") && !temp.equals("{")) {
+                    if ('}'==target && !(temp == '{')) {
                         return false;
                     }
-                    if (target.equals("]") && !temp.equals("[")) {
+                    if (']'==target && !(temp == '[')) {
                         return false;
                     }
 
