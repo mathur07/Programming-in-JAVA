@@ -10,7 +10,7 @@ public class ValidParenthesesMain {
     }
 
     private static boolean valid_parentheses(String input_string) {
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < input_string.length(); i++) {
             char target = input_string.charAt(i);
