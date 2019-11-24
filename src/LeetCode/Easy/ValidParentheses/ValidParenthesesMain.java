@@ -14,20 +14,20 @@ public class ValidParenthesesMain {
 
         for (int i = 0; i < input_string.length(); i++) {
             char target = input_string.charAt(i);
-            if ('('==target || '{'==target || '['==target) {
+            if ('(' == target || '{' == target || '[' == target) {
                 stack.push(target);
             }
             if (!stack.empty()) {
-                if (')'==target || '}'==target || ']'==target) {
+                if (')' == target || '}' == target || ']' == target) {
                     Character temp = stack.pop();
 
-                    if (')'==target && !(temp == '(')) {
+                    if (')' == target && !(temp == '(')) {
                         return false;
                     }
-                    if ('}'==target && !(temp == '{')) {
+                    if ('}' == target && !(temp == '{')) {
                         return false;
                     }
-                    if (']'==target && !(temp == '[')) {
+                    if (']' == target && !(temp == '[')) {
                         return false;
                     }
 
