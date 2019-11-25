@@ -1,7 +1,5 @@
 package LeetCode.Easy.MergeTwoSortedLists;
 
-import java.util.LinkedList;
-
 public class MergeTwoSortedListsMain {
 
     public static class ListNode {
@@ -15,9 +13,30 @@ public class MergeTwoSortedListsMain {
 
     private static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
+        ListNode result_head;
+        ListNode temp = null;
+        result_head = temp;
+
+        while (l1.next != null && l2.next != null) {
+            if (l1.val < l2.val) {
+                ListNode node = new ListNode(l1.val);
+                l1 = l1.next;
+            } else {
+                ListNode node = new ListNode(l2.val);
+                l2 = l2.next;
+            }
+
+        }
+
+        if (l1.next != null) {
+
+        }
+        if (l2.next != null) {
+
+        }
 
 
-        return new ListNode(2);
+        return result_head;
     }
 
     public static void main(String[] args) {
