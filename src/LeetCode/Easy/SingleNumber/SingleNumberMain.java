@@ -3,6 +3,9 @@ package LeetCode.Easy.SingleNumber;
 public class SingleNumberMain {
 
     private static int singleNumber(int[] array) {
+        int result = 0;
+
+        return result;
     }
 
 
