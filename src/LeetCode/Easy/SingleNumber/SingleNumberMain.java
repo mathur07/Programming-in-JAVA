@@ -18,9 +18,10 @@ public class SingleNumberMain {
             }
         }
 
-        for (int element : array) {
-            if (map.get(element) == 1) {
-                return element;
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == 1){
+                return entry.getKey();
             }
         }
 
@@ -30,7 +31,7 @@ public class SingleNumberMain {
 
 
     public static void main(String[] args) {
-        int[] array = new int[]{2, 4, 2, 1, 1,0};
+        int[] array = new int[]{2, 4, 2, 1, 1};
         int result;
         result = singleNumber(array);
         System.out.println("result = " + result);
