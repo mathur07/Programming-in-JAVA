@@ -18,13 +18,11 @@ public class SingleNumberMain {
             }
         }
 
-
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             if (entry.getValue() == 1){
                 return entry.getKey();
             }
         }
-
 
         return result;
     }
