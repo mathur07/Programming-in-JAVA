@@ -3,15 +3,16 @@ package LeetCode.Easy.BestTimetoBuyandSellStock;
 public class BestTimetoBuyandSellStockMain {
 
 
-    private static int maxProfit(int[] array) {
-        int result = -1, min = Integer.MAX_VALUE, max = 0;
-        for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] < min) {
-                min = array[i];
+    private static int maxProfit(int[] prices) {
+        int min = Integer.MAX_VALUE, max = 0;
+        for (int price : prices) {
+            if (price < min) {
+                min = price;
+            } else {
+                max = Math.max(max, price - min);
             }
-            result = Math.max(max, array[i] - min);
         }
-        return result;
+        return max;
     }
 
 
