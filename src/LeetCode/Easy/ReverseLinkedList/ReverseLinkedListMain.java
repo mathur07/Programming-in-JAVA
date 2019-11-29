@@ -14,6 +14,21 @@ public class ReverseLinkedListMain {
 
 
     private static ListNode reverseList(ListNode head1) {
+        ListNode temp;
+        ListNode temp2;
+
+        if (head1.next == null) {
+            return head1;
+        } else {
+
+            temp = head1.next;
+            temp2 = temp.next;
+            if (temp2 == null){
+
+            }
+
+        }
+
         return head1;
     }
 
