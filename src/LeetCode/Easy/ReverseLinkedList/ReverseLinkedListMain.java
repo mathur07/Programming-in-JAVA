@@ -13,23 +13,18 @@ public class ReverseLinkedListMain {
     }
 
 
-    private static ListNode reverseList(ListNode head1) {
+    private static ListNode reverseList(ListNode head) {
         ListNode temp;
         ListNode temp2;
-
-        if (head1.next == null) {
-            return head1;
-        } else {
-
-            temp = head1.next;
+        temp = head.next;
+        while (head.next != null && temp.next != null) {
             temp2 = temp.next;
-            if (temp2 == null){
-
-            }
-
+            temp.next = head;
+            head = temp;
+            temp = temp2;
         }
 
-        return head1;
+        return head;
     }
 
     public static void main(String[] args) {
@@ -42,7 +37,7 @@ public class ReverseLinkedListMain {
         node_a_2.next = node_a_3;
 
         ListNode head = reverseList(head1);
-
+        System.out.print("hi");
         while (head.next != null) {
             System.out.print(head.val + " -> ");
             head = head.next;
