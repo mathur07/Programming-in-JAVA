@@ -31,7 +31,6 @@ public class ReverseLinkedListMain {
             }
         }
 
-
         return head;
     }
 
