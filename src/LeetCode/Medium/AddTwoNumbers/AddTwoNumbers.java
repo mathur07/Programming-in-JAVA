@@ -28,12 +28,12 @@ public class AddTwoNumbers {
                 val = val / 10;
                 flag = true;
             }
-            if (flag) {
 
-            }
+
+
         }
 
-        return head;
+
 
 
     }
