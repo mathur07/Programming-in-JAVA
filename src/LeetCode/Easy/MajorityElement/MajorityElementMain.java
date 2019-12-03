@@ -17,18 +17,20 @@ public class MajorityElementMain {
                 hashMap.put(num, 1);
             }
         }
-        int result, max_value = Integer.MIN_VALUE;
+        int result = -1, max_value = Integer.MIN_VALUE;
         for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
-            if (entry.getValue() > max_value) ;
-            max_value = entry.getValue();
-            result = entry.getKey();
+            if (entry.getValue() > max_value) {
+
+                max_value = entry.getValue();
+                result = entry.getKey();
+            }
         }
-        return max_value;
+        return result;
     }
 
 
     public static void main(String[] args) {
-        int[] nums = new int[]{3, 2, 3};
+        int[] nums = new int[]{3, 3, 4};
         int result;
         result = majorityElement(nums);
         System.out.println("result = " + result);
