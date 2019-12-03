@@ -31,6 +31,7 @@ public class MajorityElementMain {
         int[] nums = new int[]{3, 2, 3};
         int result;
         result = majorityElement(nums);
+        System.out.println("result = " + result);
     }
 
 }
