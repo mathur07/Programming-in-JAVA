@@ -17,7 +17,13 @@ public class MajorityElementMain {
                 hashMap.put(num, 1);
             }
         }
-        return 1;
+        int max_value = Integer.MIN_VALUE;
+        for (int value : hashMap.values()) {
+            if (value > max_value) {
+                max_value = value;
+            }
+        }
+        return max_value;
     }
 
 
