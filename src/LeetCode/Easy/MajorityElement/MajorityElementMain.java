@@ -17,11 +17,11 @@ public class MajorityElementMain {
                 hashMap.put(num, 1);
             }
         }
-        int max_value = Integer.MIN_VALUE;
-        for (int value : hashMap.values()) {
-            if (value > max_value) {
-                max_value = value;
-            }
+        int result, max_value = Integer.MIN_VALUE;
+        for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
+            if (entry.getValue() > max_value) ;
+            max_value = entry.getValue();
+            result = entry.getKey();
         }
         return max_value;
     }
