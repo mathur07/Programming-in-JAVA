@@ -9,9 +9,9 @@ public class MajorityElementMain {
         int count = 0, max=-1;
         for (int i = 0; i < nums.length; i++) {
             if (count == 0) {
-                max = nums[0];
+                max = nums[i];
             }
-            if (max == nums[0]) {
+            if (max == nums[i]) {
                 count++;
             } else {
                 count--;
