@@ -5,27 +5,19 @@ import java.util.Map;
 
 public class MajorityElementMain {
 
-
     private static int majorityElement(int[] nums) {
-        Map<Integer, Integer> hashMap = new HashMap<>();
-        for (int num : nums) {
-            if (hashMap.get(num) != null) {
-                int value = hashMap.get(num);
-                value++;
-                hashMap.put(num, value);
+        int count = 0, max=-1;
+        for (int i = 0; i < nums.length; i++) {
+            if (count == 0) {
+                max = nums[0];
+            }
+            if (max == nums[0]) {
+                count++;
             } else {
-                hashMap.put(num, 1);
+                count--;
             }
         }
-        int result = -1, max_value = Integer.MIN_VALUE;
-        for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
-            if (entry.getValue() > max_value) {
-
-                max_value = entry.getValue();
-                result = entry.getKey();
-            }
-        }
-        return result;
+        return max;
     }
 
 
