@@ -7,11 +7,11 @@ public class MajorityElementMain {
 
     private static int majorityElement(int[] nums) {
         int count = 0, max=-1;
-        for (int i = 0; i < nums.length; i++) {
+        for (int num : nums) {
             if (count == 0) {
-                max = nums[i];
+                max = num;
             }
-            if (max == nums[i]) {
+            if (max == num) {
                 count++;
             } else {
                 count--;
