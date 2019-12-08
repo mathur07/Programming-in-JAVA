@@ -11,6 +11,6 @@ public class ClimbingStairsMain {
     public static void main(String[] args) {
         int n = 3, result;
         result = climbStairs(n);
-        System.out.println("n = " + n);
+        System.out.println("result = " + result);
     }
 }
