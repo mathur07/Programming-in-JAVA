@@ -14,7 +14,8 @@ public class MaximumSubarrayMain {
             if (temp_value < 0) {
                 temp_value = 0;
             }
-
+            temp_value+=value;
+            max_value = Integer.max(max_value,temp_value);
         }
         return max_value;
     }
