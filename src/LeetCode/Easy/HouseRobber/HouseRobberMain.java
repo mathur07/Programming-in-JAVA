@@ -12,16 +12,6 @@ public class HouseRobberMain {
     }
 
     private static int rob(int[] nums) {
-        List<Integer> odd = new ArrayList<Integer>();
-        List<Integer> even = new ArrayList<Integer>();
-
-        for (int i = 1; i <= nums.length; i++) {
-            if (i % 2 == 1) {
-                odd.add(nums[i]);
-            } else {
-                even.add(nums[i]);
-            }
-        }
 
         return 0;
     }
