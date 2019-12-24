@@ -23,13 +23,12 @@ public class HouseRobberMain {
         }
 
         temp_array[0] = nums[0];
-        temp_array[1] = nums[1];
+        temp_array[1] = Integer.max(nums[0], nums[1]);
 
         for (int i = 2; i < temp_array.length; i++) {
-            temp_array[i] = nums[i] + temp_array[i - 2];
+            temp_array[i] = Integer.max(temp_array[i - 1], temp_array[i] + temp_array[i - 2]);
         }
 
-
-        return Integer.max(temp_array[temp_array.length - 1], temp_array[temp_array.length - 2]);
+        return temp_array[temp_array.length - 1];
     }
 }
