@@ -15,8 +15,8 @@ public class WeightedStringMain {
         while (weight != 0) {
             for (int i = 0; i < array.length; i++) {
                 if (weight < array[i]) {
-                    weight -= array[i - 1];
-                    str = ((char) (65 + i - 1)) + str;
+
+
                     break;
                 }
             }
