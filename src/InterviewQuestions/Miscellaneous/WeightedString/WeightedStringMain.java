@@ -11,12 +11,12 @@ public class WeightedStringMain {
         }
 
 
-        String str = "";
+        StringBuilder str = new StringBuilder();
         while (weight != 0) {
             for (int i = 0; i < array.length; i++) {
                 if (weight < array[i]) {
                     weight -= array[i - 1];
-                    str = ((char) (65 + i - 1)) + str;
+                    str.insert(0, ((char) (65 + i - 1)));
                     break;
                 }
             }
