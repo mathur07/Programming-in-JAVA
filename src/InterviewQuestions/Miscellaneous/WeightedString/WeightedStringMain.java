@@ -16,7 +16,7 @@ public class WeightedStringMain {
             for (int i = 0; i < array.length; i++) {
                 if (weight < array[i]) {
                     weight -= array[i - 1];
-                    str.insert(0, ((char) (65 + i - 1)));
+
                     break;
                 }
             }
