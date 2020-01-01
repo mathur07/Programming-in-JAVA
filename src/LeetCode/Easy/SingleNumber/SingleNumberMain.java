@@ -1,30 +1,34 @@
 package LeetCode.Easy.SingleNumber;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class SingleNumberMain {
 
     private static int singleNumber(int[] array) {
-        int result = -1;
+//        int result = -1;
+//
+//        Map<Integer, Integer> map = new HashMap<>();
+//
+//        for (int value : array) {
+//            if (map.get(value) == null) {
+//                map.putIfAbsent(value, 1);
+//            } else {
+//                map.put(value, 2);
+//            }
+//        }
+//
+//        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+//            if (entry.getValue() == 1){
+//                return entry.getKey();
+//            }
+//        }
+//
+//        return result;
 
-        Map<Integer, Integer> map = new HashMap<>();
-
-        for (int value : array) {
-            if (map.get(value) == null) {
-                map.putIfAbsent(value, 1);
-            } else {
-                map.put(value, 2);
-            }
+        int result = 0;
+        for (int num : array) {
+            result ^= num;
         }
-
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 1){
-                return entry.getKey();
-            }
-        }
-
         return result;
+
     }
 
 
