@@ -36,12 +36,15 @@ public class ShortestUnsortedContinuousSubarrayMain {
         System.out.println(max + " " + max_i);
 
         for (int i = min_i; i < max_i; i++) {
-
             if (nums[i] < min) {
+                System.out.println("hi");
+
                 min = nums[i];
             }
 
             if (nums[i] > max) {
+                System.out.println("hi");
+
                 max = nums[i];
             }
 
