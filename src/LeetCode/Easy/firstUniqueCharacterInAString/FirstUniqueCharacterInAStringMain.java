@@ -21,8 +21,8 @@ public class FirstUniqueCharacterInAStringMain {
             }
         }
         int min = Integer.MAX_VALUE;
-        for (Map.Entry<Character,Integer> temp:map.entrySet()) {
-            if (temp.getValue()<min){
+        for (Map.Entry<Character, Integer> temp : map.entrySet()) {
+            if (temp.getValue() < min && temp.getValue() > 0) {
                 min = temp.getValue();
             }
         }
