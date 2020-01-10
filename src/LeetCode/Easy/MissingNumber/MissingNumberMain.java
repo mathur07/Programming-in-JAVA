@@ -21,5 +21,16 @@ public class MissingNumberMain {
             }
         }
         return -1;
+
+
+        int n = nums.length;
+        int total = (n * (n + 1)) / 2;
+        int sum = 0;
+        for (int value : nums) {
+            sum = sum + value;
+
+        }
+
+        return total - sum;
     }
 }
