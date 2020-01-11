@@ -13,7 +13,6 @@ public class CountingBitsMain {
 
     private static int[] countBits(int num) {
 
-
         return new int[num+1];
 
     }
