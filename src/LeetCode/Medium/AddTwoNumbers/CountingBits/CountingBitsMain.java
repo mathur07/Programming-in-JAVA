@@ -12,11 +12,9 @@ public class CountingBitsMain {
     }
 
     private static int[] countBits(int num) {
-        int[] result = new int[num+1];
 
-        //logic
 
-        return result;
+        return new int[num+1];
 
     }
 }
