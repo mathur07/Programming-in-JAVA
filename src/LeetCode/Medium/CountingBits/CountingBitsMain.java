@@ -1,4 +1,4 @@
-package LeetCode.Medium.AddTwoNumbers.CountingBits;
+package LeetCode.Medium.CountingBits;
 
 
 public class CountingBitsMain {
