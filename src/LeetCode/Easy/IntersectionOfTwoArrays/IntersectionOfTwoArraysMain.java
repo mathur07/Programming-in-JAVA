@@ -14,7 +14,6 @@ public class IntersectionOfTwoArraysMain {
 
         for (int val : result) {
             System.out.println(val);
-
         }
     }
 
@@ -27,14 +26,19 @@ public class IntersectionOfTwoArraysMain {
         }
 
         int temp;
-        for (int num:nums2) {
+        for (int num : nums2) {
             temp = map.get(num);
-            map.put(num,temp++);
+            temp++;
+            map.put(num, temp);
         }
 
-        for (Map.Entry<Integer,Integer> entry: map.entrySet()) {
-            if(entry.getValue()>0){
-                array.add(entry.getKey());
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 0) {
+                temp = entry.getValue();
+                while (temp != 0) {
+                    array.add(entry.getKey());
+                    temp--;
+                }
             }
         }
 
