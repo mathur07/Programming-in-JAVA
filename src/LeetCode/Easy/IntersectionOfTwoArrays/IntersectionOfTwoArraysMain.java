@@ -28,9 +28,9 @@ public class IntersectionOfTwoArraysMain {
         int temp;
         for (int num : nums2) {
             temp = map.get(num);
-            temp++;
+
             map.put(num, temp);
-        }
+
 
 //        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 //            if (entry.getValue() > 0) {
