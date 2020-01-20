@@ -28,19 +28,20 @@ public class IntersectionOfTwoArraysMain {
         int temp;
         for (int num : nums2) {
             temp = map.get(num);
-
+            temp++;
             map.put(num, temp);
+        }
 
 
-//        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-//            if (entry.getValue() > 0) {
-//                temp = entry.getValue();
-//                while (temp != 0) {
-//                    array.add(entry.getKey());
-//                    temp--;
-//                }
-//            }
-//        }
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 0) {
+                temp = entry.getValue();
+                while (temp != 0) {
+                    array.add(entry.getKey());
+                    temp--;
+                }
+            }
+        }
 
         int[] retArray = new int[array.size()];
 
