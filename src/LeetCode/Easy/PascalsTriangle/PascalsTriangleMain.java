@@ -10,12 +10,5 @@ public class PascalsTriangleMain {
         System.out.println("list = " + list);
     }
 
-    private static List<List<Integer>> generate(int numRows) {
-
-        List<List<Integer>> resultList = new List<List<Integer>>();
-
-        return resultList;
-
-    }
 
 }
