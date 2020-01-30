@@ -31,16 +31,6 @@ public class PascalsTriangleMain {
 
                 }
             }
-            for (int i = 0; i < triangle.length; i++) {
-                List<Integer> list = new LinkedList<>();
-                for (int j = 0; j < triangle[i].length; j++) {
-                    list.add(triangle[i][j]);
-                    if (i == j) {
-                        break;
-                    }
-                }
-                lists.add(list);
-            }
             return lists;
         }
 
