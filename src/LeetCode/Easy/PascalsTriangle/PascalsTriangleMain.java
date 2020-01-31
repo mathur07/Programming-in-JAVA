@@ -11,30 +11,7 @@ public class PascalsTriangleMain {
         System.out.println("list = " + list);
     }
 
-    private static List<List> generate(int numRows) {
-        {
-            List<List> lists = new LinkedList<>();
-            int[][] triangle = new int[numRows][numRows];
-            for (int i = 0; i < triangle.length; i++) {
-                for (int j = 0; j < triangle[i].length; j++) {
-                    if (i == j)
-                        triangle[i][j] = 1;
-
-                    if (j == 0)
-                        triangle[i][j] = 1;
-
-                    if (i != j && triangle[i][j] != 1)
-                        triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
-
-                    if (i == j)
-                        break;
-
-                }
-            }
-            return lists;
-        }
-
-    }
+    private static List<List> generate(int numRows)
 }
 
 
