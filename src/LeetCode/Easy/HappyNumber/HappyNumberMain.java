@@ -19,7 +19,11 @@ public class HappyNumberMain {
                     num = num / 10;
                 }
                 num = sum;
-
+                if (sum == 1) {
+                    return true;
+                } else {
+                    sum = 0;
+                }
             }
         } catch (Exception e) {
             return false;
