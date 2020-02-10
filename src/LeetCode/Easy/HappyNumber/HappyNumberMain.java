@@ -13,17 +13,7 @@ public class HappyNumberMain {
     private static boolean isHappy(int num) {
         int sum = 0;
         try {
-            while (true) {
-                while (num > 0) {
-                    sum += Math.pow(num % 10, 2);
-                    num = num / 10;
-                }
-                num = sum;
-                if (sum == 1) {
-                    return true;
-                } else {
-                    sum = 0;
-                }
+
             }
         } catch (Exception e) {
             return false;
