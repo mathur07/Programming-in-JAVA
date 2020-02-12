@@ -12,9 +12,6 @@ public class HappyNumberMain {
 
     private static boolean isHappy(int num) {
         int sum = 0;
-        } catch (Exception e) {
-            return false;
-        }
-
+        } 
     }
 }
