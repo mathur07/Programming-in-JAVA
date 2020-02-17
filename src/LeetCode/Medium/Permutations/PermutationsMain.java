@@ -7,7 +7,7 @@ public class PermutationsMain {
         int[] input = new int[]{1,2,3};
         List<Object> resultlist;
 
-//        resultlist = permute(input);
+        resultlist = permute(input);
     }
 
 
