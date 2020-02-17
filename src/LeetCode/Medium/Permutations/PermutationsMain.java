@@ -10,8 +10,6 @@ public class PermutationsMain {
         resultlist = permute(input);
     }
 
-    private static List<Object> permute(int[] input) {
-
-    }
+ 
 }
 
