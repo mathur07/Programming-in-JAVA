@@ -9,6 +9,6 @@ public class LongestCommonPrefixMain {
     }
 
     private static String longestCommonPrefix(String[] input) {
-        return true;
+        return null;
     }
 }
