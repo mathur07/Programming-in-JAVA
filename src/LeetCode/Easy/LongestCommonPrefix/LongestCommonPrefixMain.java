@@ -9,9 +9,9 @@ public class LongestCommonPrefixMain {
     }
 
     private static String longestCommonPrefix(String[] input) {
-//        if (input.length == 0) {
-//            return "";
-//        }
+        if (input.length == 0) {
+            return "";
+        }
         System.out.println("input.length = " + input.length);
         int n = input[0].length();
         char temp;
