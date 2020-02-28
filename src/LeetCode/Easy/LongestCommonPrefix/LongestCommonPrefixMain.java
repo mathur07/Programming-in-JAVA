@@ -4,7 +4,7 @@ public class LongestCommonPrefixMain {
     public static void main(String[] args) {
         String[] input = new String[]{"a"};
         String result;
-        result = longestCommonPrefix(input);
+        resultLongestLongestCLongestCommonPrefixMainommonPrefixMainCommonPrefixMain = longestCommonPrefix(input);
         System.out.println("result = " + result);
     }
 
