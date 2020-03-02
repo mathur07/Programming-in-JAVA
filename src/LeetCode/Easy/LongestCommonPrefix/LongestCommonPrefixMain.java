@@ -13,7 +13,7 @@ public class LongestCommonPrefixMain {
             return "";
         }
         System.out.println("input.length = " + input.length);
-        int n = input[0].length();
+
         char temp;
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < n; i++) {
