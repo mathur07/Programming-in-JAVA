@@ -28,7 +28,7 @@ public class LongestCommonPrefixMain {
             }
             result.append(temp);
         }
-        return result.toString();
+
 
     }
 }
