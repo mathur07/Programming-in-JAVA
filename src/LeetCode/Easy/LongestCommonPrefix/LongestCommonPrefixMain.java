@@ -19,9 +19,6 @@ public class LongestCommonPrefixMain {
                 if (s.length() < n) {
                     n = s.length();
                 }
-                if (temp != s.charAt(i)) {
-                    return result.toString();
-                }
             }
             result.append(temp);
         }
