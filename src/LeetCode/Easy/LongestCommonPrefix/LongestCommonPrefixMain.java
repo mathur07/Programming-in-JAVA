@@ -20,7 +20,7 @@ public class LongestCommonPrefixMain {
                     n = s.length();
                 }
             }
-            result.append(temp);
+
         }
         return result.toString();
 
