@@ -3,18 +3,20 @@ package Stack.StackUsingLinkedList;
 public class StackImplementation {
     Node head;
 
+    //create a stack
     public void create_stack() {
         this.head = null;
     }
-
+    //add an element to the top of the stack
     public void push(int data) {
         Node newNode = new Node();
         newNode.data = data;
         newNode.next = head;
         head = newNode;
     }
-
-    public void pop() {
+    
+    //remove an element from the top of the stack
+    public void pop(){
         if (is_empty()) {
             System.out.println("Stack Is Empty!, Cannot pop!");
         } else {
@@ -22,18 +24,17 @@ public class StackImplementation {
         }
     }
 
+    //prints the element in the top of the stack
     public void peek() {
         System.out.println("Top Element In Stack Is = " + head.data);
     }
 
+    //determines if the stack is empty
     public boolean is_empty() {
-        if (head == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return head == null;
     }
 
+    //outputs all of the elements of the stack
     public void print_stack() {
         if (is_empty()) {
             System.out.println("Stack Is Empty!, Nothing To Print!");
