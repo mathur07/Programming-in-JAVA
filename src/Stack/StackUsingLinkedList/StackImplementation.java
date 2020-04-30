@@ -1,4 +1,4 @@
- package StackUsingLinkedList;
+package Stack.StackUsingLinkedList;
 
 public class StackImplementation {
     Node head;
